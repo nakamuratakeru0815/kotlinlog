@@ -2,7 +2,7 @@ package jp.techacademy.takeru.kotlintest
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log //ここを追加
+import android.util.Log     //ここを追加
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,10 +10,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val human = Human("中村", 29)   //　名前を中村、年齢29歳で、Humanのインスタンスを作る
+        val human = Human("中村", 29, "サッカー")   //　名前を中村、年齢29歳で、Humanのインスタンスを作る
 
+        val human2 = Human("永吉", 33, "野球")
         human.say()
-        Log.d(("kotlintest", "私の名前は" + human.name + "です。")
-        Log.d("kotlintest", "歳は" + human.age + "です。")
+
+        human.think()
+
+        human2.say()
+
+        human2.think()
+
+
+
     }
 }
